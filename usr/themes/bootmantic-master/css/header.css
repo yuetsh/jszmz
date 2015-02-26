@@ -163,7 +163,7 @@
 
 #site-header {
     position: relative;
-    top: 140px;
+    top: 80px;
     font-family: Minion, Georgia, SimSun, serif;
     font-size: 68px;
     font-weight: bold;
@@ -206,6 +206,7 @@
     text-align: center;
     width: 80%;
     margin: auto;
+    top: -90px;
     padding-top: 40px;
     padding-bottom: 40px;
     font-size:16px;opacity:.98;
