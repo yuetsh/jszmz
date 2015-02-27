@@ -155,7 +155,7 @@
 /* 站点标题 */
 
 #description {
-    background: url(../images/rainbow.jpg);
+    /*background: url(../images/rainbow.jpg);*/
     background-position-y: 10%;
     background-size: cover;
     height: 650px;
@@ -191,13 +191,13 @@
 
 
 /* 图片下方阴影层 */
-.shadow {
-    width: 100%;
-    height: 150px;
-    position: absolute;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.2)), color-stop(100%,rgba(255, 255, 255, 0)));
-    z-index: -999;
-}
+/*.shadow {*/
+    /*width: 100%;*/
+    /*height: 150px;*/
+    /*position: absolute;*/
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.2)), color-stop(100%,rgba(255, 255, 255, 0)));*/
+    /*z-index: -999;*/
+/*}*/
 
 
 /* 中央信息块 */
