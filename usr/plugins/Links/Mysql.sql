@@ -4,5 +4,6 @@ CREATE TABLE `typecho_links` (
   `url` varchar(200) default NULL COMMENT 'linksÍøÖ·',
   `description` varchar(200) default NULL COMMENT 'linksÃèÊö',
   `order` int(10) unsigned default '0' COMMENT 'linksÅÅĞò',
+  `img` varchar(200) default NULL COMMENT 'linksÍ¼Ïñ',
   PRIMARY KEY  (`lid`)
 ) ENGINE=MYISAM  DEFAULT CHARSET=%charset%;

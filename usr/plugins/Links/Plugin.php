@@ -107,6 +107,10 @@ class Links_Plugin implements Typecho_Plugin_Interface
         $description =  new Typecho_Widget_Helper_Form_Element_Textarea('description', NULL, NULL, _t('链接描述'));
         $form->addInput($description);
         
+        /**链接图像 */
+        $img = new Typecho_Widget_Helper_Form_Element_Text('img', NULL, NULL, _t('连接图像'),_t('暂不支持本地上传，请使用外链地址。图片大小待定'));
+        $form->addInput($img);
+        
         /** 链接动作 */
         $do = new Typecho_Widget_Helper_Form_Element_Hidden('do');
         $form->addInput($do);
@@ -131,6 +135,7 @@ class Links_Plugin implements Typecho_Plugin_Interface
             $name->value($link['name']);
             $url->value($link['url']);
             $description->value($link['description']);
+            $img->value($link['img']);
             $do->value('update');
             $lid->value($link['lid']);
             $submit->value(_t('编辑链接'));
@@ -173,7 +178,7 @@ class Links_Plugin implements Typecho_Plugin_Interface
 		$db = Typecho_Db::get();
 		$links = $db->fetchAll($db->select()->from('typecho_links')->order('typecho_links.order', Typecho_Db::SORT_ASC));
 		foreach ($links as $link) {
-			echo str_replace(array('{url}', '{name}'), array($link['url'], $link['name']), $pattern);
+			echo str_replace(array('{url}', '{name}','{description}','{image}'), array($link['url'], $link['name'],$link['description'],$link['img']), $pattern);
 		}
 	}
 }

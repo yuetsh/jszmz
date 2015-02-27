@@ -10,7 +10,7 @@ class Links_Action extends Typecho_Widget implements Widget_Interface_Do
 			$this->response->goBack();
 		}
 		/** 取出数据 */
-		$link = $this->request->from('name', 'url', 'description');
+		$link = $this->request->from('name', 'url', 'description','img');
 		$link['order'] = $this->db->fetchObject($this->db->select(array('MAX(order)' => 'maxOrder'))->from('typecho_links'))->maxOrder + 1;
 
 		/** 插入数据 */
@@ -34,7 +34,7 @@ class Links_Action extends Typecho_Widget implements Widget_Interface_Do
 		}
 
 		/** 取出数据 */
-		$link = $this->request->from('lid', 'name', 'url', 'description');
+		$link = $this->request->from('lid', 'name', 'url', 'description','img');
 
 		/** 更新数据 */
 		$this->db->query($this->db->update('typecho_links')->rows($link)->where('lid = ?', $link['lid']));
