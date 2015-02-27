@@ -43,6 +43,7 @@
 /* 如果提供背景, 就覆盖css/header.css里的默认背景 */
 #description {
     background: url(<?php $this->options->bgImg() ?>);
+    box-shadow: 0 5px 50px #000;
     background-position-y: 10%;
     background-size: cover;
 }
