@@ -164,12 +164,14 @@ class Thumbnail_Plugin implements Typecho_Plugin_Interface
 			if( $imgCount >=1 ){
 				$img = $matches[2][0];
 			}else {
-				
+			    $img="";
+				/*
 				if( file_exists( $_SERVER['DOCUMENT_ROOT'] . $dir_cate . $cate . $default_ext ) ){
 					$img = $dir_cate . $cate . $default_ext ;
 				}else{
 					$img = Thumbnail_Plugin::randPic( $dir_rand, $default_img, $arr_ext );  //随机图片
 				}
+				*/
 			}
 			/**↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑**/
 			
@@ -192,7 +194,9 @@ class Thumbnail_Plugin implements Typecho_Plugin_Interface
 		
 		}
 		
-		echo $img;
+		
+		
+		return $img;
 		
     }
 

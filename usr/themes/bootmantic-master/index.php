@@ -20,7 +20,12 @@
             <span class="day"><?php $this->date('d'); ?></span>
         </span>
         <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a></p>
-<div ><img width="70px" src="<?php Thumbnail_Plugin::show($this); ?>"></img></div>
+        <?php if (($i=Thumbnail_Plugin::show($this))!="") : ?>
+            <div class="Thumb">
+            <img width="70px" src="<?=$i; ?>">
+            </img>
+            </div>
+        <?php endif; ?>
         <div class="ui ribbon label <?php $this->options->labelColor() ?>"><?php $this->category(','); ?></div>
             <div class="article-content <?php $this->options->labelColor() ?>">
                  <?php $this->excerpt(180, '...');  ?>
