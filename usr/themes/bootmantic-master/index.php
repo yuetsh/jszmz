@@ -19,15 +19,19 @@
             <span class="month"><?php $this->date('m月'); ?></span>
             <span class="day"><?php $this->date('d'); ?></span>
         </span>
-        <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a></p>
+        <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a><br/>
+        <span class="article-meta">发布者： <?php $this->author(); ?>&nbsp&nbsp&nbsp&nbsp&nbsp分类： <?php $this->category(','); ?></span>
+        </p>
         <?php if (($i=Thumbnail_Plugin::show($this))!="") : ?>
             <div class="Thumb">
             <img width="70px" src="<?=$i; ?>">
             </img>
             </div>
         <?php endif; ?>
-        <div class="ui ribbon label <?php $this->options->labelColor() ?>"><?php $this->category(','); ?></div>
-            <div class="article-content <?php $this->options->labelColor() ?>">
+        
+    <!--    <div class="ui ribbon label <?php $this->options->labelColor() ?>"><?php $this->category(','); ?></div>
+    -->
+       <div class="article-content <?php $this->options->labelColor() ?>">
                  <?php $this->excerpt(180, '...');  ?>
             </div>
         </article>
