@@ -181,8 +181,8 @@
     font-size:16px;
     background: rgba(114, 163, 239, 0.53);
 
-    box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);;
-    -moz-box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);;
+    box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
+    -moz-box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
 
     animation: show-description 1s ease-out 0 1 forwards;
     -o-animation: show-description 1s ease-out 0 1 forwards;
