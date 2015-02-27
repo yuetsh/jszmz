@@ -39,14 +39,14 @@
 
 <?php if ($this->options->bgImg): ?>
 <style>
-/* 自己用就放进外部css文件了, 为了能让php自定义, 只能放这里了 */
-/* 如果提供背景, 就覆盖css/header.css里的默认背景 */
-#description {
-    //background: url(<?php $this->options->bgImg() ?>);
-    //box-shadow: 0 5px 50px #000;
+ /*自己用就放进外部css文件了, 为了能让php自定义, 只能放这里了 */
+ /*如果提供背景, 就覆盖css/header.css里的默认背景 */
+/*#description {
+    background: url(<?php $this->options->bgImg() ?>);
+    box-shadow: 0 5px 50px #000;
     background-position-y: 10%;
     background-size: cover;
-}
+}*/
 </style>
 <?php endif; ?>
 
@@ -95,19 +95,20 @@
   
 <header id="description">
     <div id="site-header">
-        <a class="site-title" href="<?php $this->options->siteUrl(); ?>"><img src="http://qn.cdog.me/jx/logo2.png"/></a>
+        <?php if ($this->options->headIcon): ?>
+        <img class="avatar" src="<?php $this->options->headIcon() ?>"/>
+        <?php else: ?>
+        <img class="avatar" src="<?php $this->options->themeUrl('images/head.png') ?>"/>
+        <?php endif; ?>
     </div>
+
+    <div id="information" class="info block">
+            <a class="site-title" href="<?php $this->options->siteUrl(); ?>">
+                <img src="http://qn.cdog.me/jx/logo2.png"/>
+            </a>
+            <p class="description"><?php $this->options->description(); ?></p>
+        </div>
 </header>
 
-<div class="shadow"></div>
-
 <div class="container" id="content">
-    <div id="information" class="info block">
-        <?php if ($this->options->headIcon): ?>
-        <img class="avatar" src="<?php $this->options->headIcon() ?>" />
-        <?php else: ?>
-        <img class="avatar" src="<?php $this->options->themeUrl('images/head.png') ?>" />
-        <?php endif; ?>
-        <p class="description"><?php $this->options->description(); ?></p>
-    </div>
     <div class="article-list">
