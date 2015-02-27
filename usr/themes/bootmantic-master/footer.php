@@ -5,7 +5,7 @@
     <div class="container">
         <p>
             &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-            <?php _e('Theme By <a href="http://blog.sloger.info" target="_blank">Sloger</a>. '); ?>
+            <?php _e('Theme By Sloger</a>. '); ?>
             <?php _e('Adapted By <a href="http://cdog.me" target="_blank">CDog</a>. '); ?>
         </p>
 <p></p>
