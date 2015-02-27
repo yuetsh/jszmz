@@ -10,6 +10,12 @@ function themeConfig($form) {
     $siteIcon = new Typecho_Widget_Helper_Form_Element_Text('siteIcon', NULL, NULL, _t('标题栏和书签栏Icon'), _t('在这里填入一个图片URL地址, 作为标题栏和书签栏Icon, 默认不显示'));
     $form->addInput($siteIcon);
 
+    $whatInNavbar=new Typecho_Widget_Helper_Form_Element_Select('whatInNavbar', array(
+        'cate' => _t('分类目录'),
+        'page' => _t('页面链接')
+       ),'cata',_t('导航栏内容'),_t(请选择导航栏要显示的项目));
+    $form->addInput($whatInNavbar);
+
     $labelColor = new Typecho_Widget_Helper_Form_Element_Select('labelColor', array(
         'red' => _t('红色'),
         'green' => _t('绿色'),
