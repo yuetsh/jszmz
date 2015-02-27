@@ -20,7 +20,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, img, footer {
 }
 body {
     /*background: #e5e5e5 url(../images/GB.jpeg) no-repeat center top;*/
-    background:url(../images/BG3.jpeg);
+    background:url(../images/BG3.jpeg) fixed bottom;
     filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
     -moz-background-size:100%;
     background-size:100%;
