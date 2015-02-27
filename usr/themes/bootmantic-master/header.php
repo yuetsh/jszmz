@@ -70,10 +70,17 @@
     <div class="container">
         <ul class="nav">
             <li><a<?php if($this->is('index')): ?> class="active"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
-            <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-            <?php while($pages->next()): ?>
-            <li><a<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
-            <?php endwhile; ?>
+            <?php if ($this->options->whatInNavbar == "cate") : ?>
+                <?php $this->widget('Widget_Metas_Category_List')->to($cate); ?>
+                <?php while($cate->next()): ?>
+                <li><a<?php if($this->is('category', $cate->slug)): ?> class="active"<?php endif; ?> href="<?php $cate->permalink(); ?>" title="<?php $cate->description(); ?>"><?php $cate->name(); ?></a></li>
+                <?php endwhile; ?>
+            <?php elseif ($this->options->whatInNavbar == "page"): ?>
+                <?php $this->widget('Widget_Contents_Page_List')->to($page); ?>
+                <?php while($page->next()): ?>
+                <li><a<?php if($this->is('page', $page->slug)): ?> class="active"<?php endif; ?> href="<?php $page->permalink(); ?>" title="<?php $page->title(); ?>"><?php $page->title(); ?></a></li>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </ul>
         <div class="nav-right">
             <?php if (!empty($this->options->navbarMeta) && in_array('ShowSearch', $this->options->navbarMeta)): ?>

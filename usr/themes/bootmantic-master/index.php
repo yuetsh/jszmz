@@ -22,7 +22,7 @@
         <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a></p>
         <div class="ui ribbon label <?php $this->options->labelColor() ?>"><?php $this->category(','); ?></div>
             <div class="article-content <?php $this->options->labelColor() ?>">
-                <?php $this->content('阅读全文 >>'); ?>
+                 <?php $this->excerpt(180, '...');  ?>
             </div>
         </article>
     <?php endwhile; ?>
