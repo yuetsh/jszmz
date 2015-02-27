@@ -147,7 +147,7 @@
     background: #000;
 }
 .navbar .nav-right a {
-    padding: 0px;
+    padding: 0;
     padding-top: 5px;
 }
 
@@ -155,21 +155,18 @@
 /* 站点标题 */
 
 #description {
-    /*background: url(../images/rainbow.jpg);*/
-    background-position-y: 10%;
-    background-size: cover;
-    height: 650px;
+    height: 830px;
 }
 
 #site-header {
     position: relative;
-    top: 80px;
+    top: 100px;
     font-family: Minion, Georgia, SimSun, serif;
     font-size: 68px;
     font-weight: bold;
     text-align: center;
     text-shadow: 0px 2px 13px black;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
 
     animation: show-site-title 1s ease-out 0 1 forwards;  
     -o-animation: show-site-title 1s ease-out 0 1 forwards;
@@ -177,43 +174,15 @@
     -webkit-animation: show-site-title 1s ease-out 0 1 forwards;
 }
 
-#site-header a {
-    color: #fff;
-}
-#site-header a:hover {
-    text-shadow: 1px 1px 3px #969696;
-
-    transition: color .25s linear, text-shadow .25s linear;
-    -o-transition: color .25s linear, text-shadow .25s linear;
-    -moz-transition: color .25s linear, text-shadow .25s linear;
-    -webkit-transition: color .25s linear, text-shadow .25s linear;
-}
-
-
-/* 图片下方阴影层 */
-/*.shadow {*/
-    /*width: 100%;*/
-    /*height: 150px;*/
-    /*position: absolute;*/
-    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0, 0, 0, 0.2)), color-stop(100%,rgba(255, 255, 255, 0)));*/
-    /*z-index: -999;*/
-/*}*/
-
-
-/* 中央信息块 */
-
 #information {
     text-align: center;
-    width: 80%;
+    width: 78%;
     margin: auto;
-    top: -90px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-size:16px;opacity:.98;
-    background: rgba(230, 244, 249, 0.8);
+    font-size:16px;
+    background: rgba(114, 163, 239, 0.53);
 
-    box-shadow: 0 5px 20px #555;
-    -moz-box-shadow: 0 5px 20px #555;
+    box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);;
+    -moz-box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);;
 
     animation: show-description 1s ease-out 0 1 forwards;
     -o-animation: show-description 1s ease-out 0 1 forwards;
@@ -221,11 +190,26 @@
     -webkit-animation: show-description 1s ease-out 0 1 forwards;
 }
 
-#information  img.avatar {
+#information a {
+    color: #fff;
+}
+#information a:hover {
+    text-shadow: 1px 1px 3px #969696;
+
+    transition: color .25s linear, text-shadow .25s linear;
+    -o-transition: color .25s linear, text-shadow .25s linear;
+    -moz-transition: color .25s linear, text-shadow .25s linear;
+    -webkit-transition: color .25s linear, text-shadow .25s linear;
+}
+#information a.site-title img{
+    margin-top:-35px;
+}
+/* 中央信息块 */
+#site-header img.avatar {
     float: none;
-    width: 100px;
-    height: 100px;
-    margin: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
   
     transition: 500ms;
     -o-transition: 500ms;
@@ -235,7 +219,7 @@
     box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 }
-#information  img.avatar:hover {
+#site-header img.avatar:hover {
     transform: none;
     -o-transform: none;
     -ms-transform: none;
@@ -249,7 +233,8 @@
 #information .description {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: -40px;
+    color: white;
 }
 
 /* 以下是动画部分 */
