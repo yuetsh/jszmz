@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <base href="<?php $this->options->siteUrl(); ?>" />
     <meta name="google-site-verification" content="ScmDBVL4m8_1FCWi0q1GowKId0hYzo3t10pCTkxiMwg" />
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
