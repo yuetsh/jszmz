@@ -148,7 +148,7 @@ class Thumbnail_Plugin implements Typecho_Plugin_Interface
 		
         $cid = $obj->cid;
 		$cate = $obj->category;
-		$content = $obj->text;
+		$content = $obj->content;
 		$img = $default_img;
 		
         $db = Typecho_Db::get();
@@ -159,7 +159,8 @@ class Thumbnail_Plugin implements Typecho_Plugin_Interface
 		if( empty($attach) ){ //没有附件的时候 从文章中匹配
 
 			/**↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓**/
-			preg_match_all( "/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $content, $matches );
+			//'/\<img.*?src\=(\\'|\")(.*?)(\\'|\")[^>]*>/'
+			preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $content, $matches );
 			$imgCount = count($matches[0]);
 			if( $imgCount >=1 ){
 				$img = $matches[2][0];
