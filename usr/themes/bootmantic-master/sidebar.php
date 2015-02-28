@@ -3,7 +3,10 @@
     <section class="block">
         <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('最新文章'); ?></p>
         <div class="list">
-            <?php $this->widget('Widget_Contents_Post_Recent')->parse('<a href="{permalink}" class="item" target="_blank">{title}</a>'); ?>
+            <?php $this->widget('Widget_Contents_Post_Recent')->to($spost); ?>
+            <?php while ($spost->next()) : ?>
+                <a href="<?php $spost->permalink(); ?>" class="item" target="_blank"><?php $spost->title(46,'...') ?></a>
+            <?php endwhile; ?>
         </div>
     </section>
     <?php endif; ?>

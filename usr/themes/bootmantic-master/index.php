@@ -19,7 +19,7 @@
             <span class="month"><?php $this->date('m月'); ?></span>
             <span class="day"><?php $this->date('d'); ?></span>
         </span>
-        <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a><br/>
+        <p class="title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title(56,'...'); ?></a><br/>
         <span class="article-meta">发布者： <?php $this->author(); ?>&nbsp&nbsp&nbsp&nbsp&nbsp分类： <?php $this->category(','); ?></span>
         </p>
         <?php if (($i=Thumbnail_Plugin::show($this))!="") : ?>
