@@ -86,7 +86,8 @@ img.avatar {
 
 
 .article-list .main p {
-    margin: 10px 0px;
+    margin: 10px 0;
+    padding:0 20px;
 }
 
 /* 布局 */
@@ -178,3 +179,13 @@ section.block a{
     
 }
 
+/*2015.3.1*/
+.Thumb{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.article-content{
+    width: 80%;
+    padding-left: 20%;
+}
