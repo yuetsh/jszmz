@@ -194,3 +194,7 @@ section.block a{
     width: 80%;
     padding-left: 20%;
 }
+
+.article-content-noimg{
+    width: 100%;
+}

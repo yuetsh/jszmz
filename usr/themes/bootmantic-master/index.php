@@ -13,7 +13,8 @@
 ?>
 
 <div class="main">
-    <?php while($this->next()): ?>
+    <?php while($this->next()):  
+    $i=""; ?>
     <article class="block post">
         <span class="round-date <?php $this->options->labelColor() ?>">
             <span class="month"><?php $this->date('m月'); ?></span>
@@ -24,14 +25,13 @@
         </p>
         <?php if (($i=Thumbnail_Plugin::show($this))!="") : ?>
             <div class="Thumb">
-            <img width="70px" src="<?=$i; ?>">
-            </img>
+            <img src="<?=$i; ?>" />
             </div>
         <?php endif; ?>
         
     <!--    <div class="ui ribbon label <?php $this->options->labelColor() ?>"><?php $this->category(','); ?></div>
     -->
-       <div class="article-content <?php $this->options->labelColor() ?>">
+       <div class="article-content<?=$i ? "" : "-noimg"; ?> <?php $this->options->labelColor() ?>">
                  <?php $this->excerpt(180, '...');  ?>
             </div>
         </article>
