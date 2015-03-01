@@ -87,7 +87,6 @@ img.avatar {
 
 .article-list .main p {
     margin: 10px 0;
-    padding:0 20px;
 }
 
 /* 布局 */
@@ -180,12 +179,18 @@ section.block a{
 }
 
 /*2015.3.1*/
+.title{
+    padding: 0 10px;
+}
+
+/*有缩略图的时候：class为.Thumb 和 .article-content-thumb*/
+/*无缩略图时候默认.article-content，样式默认*/
 .Thumb{
     float: left;
     width: 20%;
     text-align: center;
 }
-.article-content{
+.article-content-thumb{
     width: 80%;
     padding-left: 20%;
 }

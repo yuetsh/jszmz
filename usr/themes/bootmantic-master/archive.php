@@ -22,8 +22,7 @@
         </p>
         <?php if (($i=Thumbnail_Plugin::show($this))!="") : ?>
             <div class="Thumb">
-            <img width="70px" src="<?=$i; ?>">
-            </img>
+                <img src="<?=$i; ?>"/>
             </div>
         <?php endif; ?>
         
