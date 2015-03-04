@@ -1,9 +1,11 @@
 CREATE TABLE `typecho_links` (
-  `lid` int(10) unsigned NOT NULL auto_increment COMMENT 'links±íÖ÷¼ü',
-  `name` varchar(200) default NULL COMMENT 'linksÃû³Æ',
-  `url` varchar(200) default NULL COMMENT 'linksÍøÖ·',
-  `description` varchar(200) default NULL COMMENT 'linksÃèÊö',
-  `order` int(10) unsigned default '0' COMMENT 'linksÅÅĞò',
-  `img` varchar(200) default NULL COMMENT 'linksÍ¼Ïñ',
+  `lid` int(10) unsigned NOT NULL auto_increment COMMENT 'linksè¡¨ä¸»é”®',
+  `name` varchar(200) default NULL COMMENT 'linksåç§°',
+  `url` varchar(200) default NULL COMMENT 'linksç½‘å€',
+  `sort` varchar(200) default NULL COMMENT 'linksåˆ†ç±»',
+  `image` varchar(200) default NULL COMMENT 'linkså›¾ç‰‡',
+  `description` varchar(200) default NULL COMMENT 'linksæè¿°',
+  `user` varchar(200) default NULL COMMENT 'è‡ªå®šä¹‰',
+  `order` int(10) unsigned default '0' COMMENT 'linksæ’åº',
   PRIMARY KEY  (`lid`)
 ) ENGINE=MYISAM  DEFAULT CHARSET=%charset%;

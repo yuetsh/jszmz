@@ -57,7 +57,7 @@ $(document).ready(function($) {
         $.ajax({ 
            url: url,
            beforeSend: function() {
-               $('#comments .comment-list').html('<p class="waiting">正在努力加载内容, 请稍等...</p>');
+               $('#comments .comment-list').html('<p class="waiting">少女祈祷中...</p>');
                ajaxed = true;
            },
            success: function(data) {

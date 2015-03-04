@@ -184,17 +184,25 @@ section.block a{
 }
 
 /*有缩略图的时候：class为.Thumb 和 .article-content-thumb*/
-/*无缩略图时候默认.article-content，样式默认*/
 .Thumb{
     float: left;
     width: 20%;
+    padding-right: 2%;
     text-align: center;
 }
 .article-content-thumb{
-    width: 80%;
-    padding-left: 20%;
+    width: 78%;
+    padding-left: 22%;
 }
 
 .article-content-noimg{
     width: 100%;
+}
+@media only screen and (max-width: 800px){
+    .Thumb{
+        width: 100%;
+    }
+    .article-content-thumb{
+        width: 100%;
+    }
 }
