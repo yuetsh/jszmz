@@ -190,6 +190,9 @@ section.block a{
     padding-right: 2%;
     text-align: center;
 }
+.Thumb img{
+    height: 100px;!important;
+}
 .article-content-thumb{
     width: 78%;
     padding-left: 22%;
