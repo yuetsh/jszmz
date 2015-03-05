@@ -205,6 +205,9 @@ section.block a{
     .Thumb{
         width: 100%;
     }
+    .Thumb img{
+        height: auto;
+    }
     .article-content-thumb{
         width: 100%;
     }
