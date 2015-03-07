@@ -158,15 +158,17 @@
     height: 830px;
 }
 /*iphone4*/
-@media (max-height: 480px) {
-    #description{
-        height: 550px;
-    }
-}
-/*iphone5*/
+
+/*iphone4 iphone5*/
 @media (max-width: 320px) {
     #description{
-        height: 568px;
+        height: 710px;
+    }
+}
+/*iphone6 iphone6plus*/
+@media (max-width: 320px) and (max-width: 375px) {
+    #description{
+        height: 765px;
     }
 }
 
