@@ -64,10 +64,7 @@ img {
     -webkit-transition: 500ms;
 }
 img:hover {
-    -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-
-    opacity: .8;
+    cursor: pointer;
 }
 
 /* 侧边栏友情链接和回复列表中的头像 */
@@ -188,9 +185,10 @@ section.block a{
     float: left;
     width: 20%;
     height: 110px;
-    padding-right: 2%;
+    margin-right: 2%;
     text-align: center;
     overflow: hidden;
+    border-radius: 5px;
 }
 .Thumb img{
     width: 100%;
