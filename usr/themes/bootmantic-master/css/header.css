@@ -157,6 +157,18 @@
 #description {
     height: 830px;
 }
+/*iphone4*/
+@media (max-height: 480px) {
+    #description{
+        height: 550px;
+    }
+}
+/*iphone5*/
+@media (max-width: 320px) {
+    #description{
+        height: 568px;
+    }
+}
 
 #site-header {
     position: relative;
