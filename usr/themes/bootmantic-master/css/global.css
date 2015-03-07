@@ -20,7 +20,15 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, img, footer {
 }
 
 .friend {
-    width:33%;
+    display: table;
+}
+/*友情链接下的<a>标签 */
+.friend a{
+    display: table-cell;
+    width: 33%;
+}
+.friend a img{
+    width: 100%;
 }
 
 body {
