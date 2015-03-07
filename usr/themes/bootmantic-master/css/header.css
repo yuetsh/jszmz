@@ -235,6 +235,7 @@
     font-weight: bold;
     margin-top: -40px;
     color: white;
+    cursor: pointer;
 }
 
 /* 以下是动画部分 */
