@@ -27,7 +27,7 @@
     <section class="block friend-list">
         <p class="ui <?php $this->options->labelColor() ?> ribbon label">友情链接</p>
         <div class="animated list friend">
-            <?php Links_Plugin::output("<a class=\"item link\" href=\"{url}\" title=\"{name}\" target=\"_blank\"><img class=\" image\"  src=\"{image}\" alt=\"{name}\" /></a>\n", 10); ?>
+            <?php Links_Plugin::output("<a class=\"item link\" href=\"{url}\" title=\"{name}\" target=\"_blank\" style="display:inline-block;width:31%;"><img class=\" image\"  src=\"{image}\" alt=\"{name}\" /></a>\n", 10); ?>
         </div>
     </section>
     <?php endif; ?>

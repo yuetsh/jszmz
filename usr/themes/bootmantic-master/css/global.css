@@ -22,11 +22,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, img, footer {
 .friend {
 
 }
-/*友情链接下的<a>标签 */
-.friend a{
-    display: inline-block;
-    width: 31%;
-}
 
 body {
     /*background: #e5e5e5 url(../images/GB.jpeg) no-repeat center top;*/
