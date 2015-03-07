@@ -166,7 +166,7 @@
     }
 }
 /*iphone6 iphone6plus*/
-@media (max-width: 320px) and (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 375px) {
     #description{
         height: 765px;
     }
