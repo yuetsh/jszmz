@@ -1,4 +1,13 @@
 <div class="side">
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
+    <section class="block">
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('分类'); ?></p>
+        <div class="animated list category">
+            <?php $this->widget('Widget_Metas_Category_List')->parse('<div class="item"><a href="{permalink}" target="_blank">{name}</a> <div class="ui label">{count}</div></div>'); ?>
+        </div>
+    </section>
+    <?php endif; ?>
+
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
     <section class="block">
         <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('最新文章'); ?></p>
@@ -32,14 +41,7 @@
     </section>
     <?php endif; ?>
 
-    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
-    <section class="block">
-        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('分类'); ?></p>
-        <div class="animated list category">
-            <?php $this->widget('Widget_Metas_Category_List')->parse('<div class="item"><a href="{permalink}" target="_blank">{name}</a> <div class="ui label">{count}</div></div>'); ?>
-        </div>
-    </section>
-    <?php endif; ?>
+    
 
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
     <section class="block">
