@@ -182,14 +182,14 @@
 /*iphone4 iphone5*/
 @media (max-width: 320px) {
     #description {
-        height: 410px;
+        height: 350px;
     }
 }
 
 /*iphone6 iphone6plus*/
 @media (min-width: 320px) and (max-width: 375px) {
     #description {
-        height: 445px;
+        height: 370px;
     }
 }
 
