@@ -206,10 +206,12 @@ section.block a{
 .article-content-thumb{
     width: 78%;
     padding-left: 22%;
+    min-height: 120px;
 }
 
 .article-content-noimg{
     width: 100%;
+    min-height: 120px;
 }
 @media only screen and (max-width: 800px){
     .Thumb{
