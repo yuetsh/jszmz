@@ -89,7 +89,6 @@
     width: 70px;
     padding-top: 10px;
     border-radius: 100px;
-
     color: #fff;
     background-color: #E8E8E8;
     border-color: #DE3859;
@@ -99,6 +98,7 @@
 .round-date .month, .round-date .day {
     text-align: center;
     display: block;
+    cursor: pointer;
 }
 .round-date .day {
     font-size: 30px;	

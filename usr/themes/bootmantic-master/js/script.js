@@ -39,7 +39,7 @@ $(document).ready(function($) {
     $('.main .block .comments').click(function () {
         $(this).siblings('.comment-list').slideToggle("slow");
     });
-    $('.main .block .round-date').click(function () {
+    $('.main .block .round-date, .main .block .round-date .month , .main .block .round-date .day').click(function () {
         $(this).siblings('.label').slideToggle("slow");
 //        ThumbImg
         $(this).siblings('.Thumb').slideToggle("slow");
