@@ -72,7 +72,7 @@
     <div class="container">
         <ul class="pgwMenu">
             <li><a<?php if($this->is('index')&&!isset($_GET['allcate'])): ?> class="selected"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
-            <li><a<?php if(isset($_GET['allcate'])): ?> class="selected"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>?allcate"><?php _e('文章分类'); ?></a></li>
+            <li><a<?php if(isset($_GET['allcate'])): ?> class="selected"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>?allcate"><?php _e('分类'); ?></a></li>
             <?php if ($this->options->whatInNavbar == "cate") : ?>
                 <?php $this->widget('Widget_Metas_Category_List')->to($cate); ?>
                 <?php while($cate->next()): ?>

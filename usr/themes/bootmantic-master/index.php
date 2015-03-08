@@ -44,7 +44,7 @@
     <?php while($catelist->next()):  ?>
     <article class="block post">
         
-        <p class="title"><a href="<?php $catelist->permalink() ?>" target="_blank"><?php $catelist->name(56,'...'); ?></a><br/>
+        <p class="title"><a href="<?php $catelist->permalink() ?>" target="_parent"><?php $catelist->name(56,'...'); ?></a><br/>
         <span class="article-meta">文章数： <?php $catelist->count(); ?></span>
         </p>
         
