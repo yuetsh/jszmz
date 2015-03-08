@@ -173,7 +173,8 @@
 /* 站点标题 */
 
 #description {
-    height: 830px;
+    height: 440px;
+    
 }
 
 /*iphone4*/
@@ -260,6 +261,7 @@
 
 /* 中央信息块 */
 #site-header img.avatar {
+    display:none;
     float: none;
     width: 200px;
     height: 200px;
