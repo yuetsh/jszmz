@@ -187,7 +187,17 @@ section.block a{
 
 /*2015.3.1*/
 .title{
-    padding: 0 20px;
+    padding: 0 40px;
+}
+/*2015.3.8*/
+/*出现左边蓝色的圈圈 */
+@media (max-width: 480px) {
+    .title{
+        padding: 0 5px;
+    }
+    .title a{
+        font-size: 18px;
+    }
 }
 
 /*有缩略图的时候：class为.Thumb 和 .article-content-thumb*/
