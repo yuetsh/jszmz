@@ -6,9 +6,14 @@ function themeConfig($form) {
 
     $headIcon = new Typecho_Widget_Helper_Form_Element_Text('headIcon', NULL, NULL, _t('首页头像地址'), _t('在这里填入一个图片URL地址, 作为首页头像, 默认使用images下的head.png'));
     $form->addInput($headIcon);
+    
+
 
     $siteIcon = new Typecho_Widget_Helper_Form_Element_Text('siteIcon', NULL, NULL, _t('标题栏和书签栏Icon'), _t('在这里填入一个图片URL地址, 作为标题栏和书签栏Icon, 默认不显示'));
     $form->addInput($siteIcon);
+    
+    $WeiboHtml = new Typecho_Widget_Helper_Form_Element_Text('WeiboHtml', NULL, NULL, _t('微博展示代码'), _t('当且仅当下方“微博展示”选中时才生效'));
+    $form->addInput($WeiboHtml);
 
     $whatInNavbar=new Typecho_Widget_Helper_Form_Element_Select('whatInNavbar', array(
         'cate' => _t('分类目录'),
@@ -40,7 +45,8 @@ function themeConfig($form) {
         'ShowFriend' => _t('显示友情链接(确保正确启用了Links插件)'),
         'ShowCategory' => _t('显示分类'),
         'ShowArchive' => _t('显示归档'),
-        'ShowOther' => _t('显示其它杂项')),
+        'ShowOther' => _t('显示其它杂项'),
+        'ShowWeibo' => _t('微博展示')),
     array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend', 'ShowOther'), _t('侧边栏显示'));
     
     $form->addInput($sidebarBlock->multiMode());

@@ -1,9 +1,18 @@
 <div class="side">
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="block">
-        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('分类'); ?></p>
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('文章分类'); ?></p>
         <div class="animated list category">
             <?php $this->widget('Widget_Metas_Category_List')->parse('<div class="item"><a href="{permalink}" target="_blank">{name}</a> <div class="ui label">{count}</div></div>'); ?>
+        </div>
+    </section>
+    <?php endif; ?>
+    
+     <?php if (!empty($this->options->WeiboHtml) && in_array('ShowWeibo', $this->options->sidebarBlock)): ?>
+    <section class="block">
+        <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('官方微博'); ?></p>
+        <div class="animated list category">
+            <?= $this->options->WeiboHtml; ?>
         </div>
     </section>
     <?php endif; ?>
