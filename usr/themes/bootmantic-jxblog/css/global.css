@@ -1,0 +1,228 @@
+/*------------------------------------
+ * theme by Sloger
+ *
+ * @author  Sloger
+ * @link  http: //blog.sloger.info
+ * @update  2013-12-31
+ * --------------------------------- */
+
+/*********************
+ *
+ *      整体框架
+ *
+ *********************/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, div, span, img, footer {
+    margin: 0px;
+    cursor: default;
+
+
+    -webkit-user-drag: none;
+}
+
+.friend {
+
+}
+
+body {
+    /*background: #e5e5e5 url(../images/GB.jpeg) no-repeat center top;*/
+    background:url(../images/BG-WEB.jpg) fixed bottom;
+    /*filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";*/
+    /*-moz-background-size:100%;*/
+    background-size:100%;
+    font: 16px Microsoft YaHei,\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;
+    line-height: 1.8;
+
+}
+
+/*3.8更新*/
+@media (max-width: 890px) {
+    body {
+        background:url(../images/BG-RE.jpg) fixed bottom;
+        background-size:100%;
+        font: 16px Microsoft YaHei,\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;
+        line-height: 1.8;
+    }
+}
+a {
+    color: #6ECFF5;
+    text-decoration: none;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+a:hover {
+    color: #707070;
+    text-shadow: 1px 1px 5px #969696;
+}
+img {
+    max-width: 100%;
+    border-radius: 5px;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+img:hover {
+    cursor: pointer;
+}
+
+/* 侧边栏友情链接和回复列表中的头像 */
+img.avatar {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50px;
+
+    transition: 500ms;
+    -o-transition: 500ms;
+    -moz-transition: 500ms;
+    -webkit-transition: 500ms;
+}
+
+
+.article-list .main p {
+    margin: 10px 0;
+}
+
+/* 布局 */
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.container:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+@media (min-width: 1170px) {
+    .container {
+        max-width: 80%;
+    } 
+}
+
+
+/* semantic框架提供的 label */
+
+.ui.ribbon.label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* 代码 */
+
+pre, code {
+    border-radius: 5px;
+    color: #DE3859;
+    border: 1px solid #ddd;
+    padding: 2px 5px;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+pre {
+    padding: 10px;
+    border-left: 4px solid #de3859;
+    overflow: auto;
+}
+pre code {
+    border: 0px;
+    padding: 0px;
+}
+
+
+/* footer 部分 */
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+footer p {
+    margin: 5px 0px;
+}
+footer a {
+    color: rgb(255, 255, 255);
+}
+footer a:hover {
+    color: rgb(200, 200, 200);
+}
+
+/* 光标 */
+.side .block .label:hover, .main .block .comments:hover, .main .block .round-date:hover {
+    cursor: pointer;
+}
+
+
+#content {
+    position:relative;
+    margin-top: -180px;
+}
+
+.zocial:before {
+    border: none;
+}
+
+section.block a{
+    color: #333;
+    
+}
+
+.title a{
+    color: #333;
+    
+}
+
+/*2015.3.1*/
+.title{
+    padding: 0 20px;
+}
+
+/*有缩略图的时候：class为.Thumb 和 .article-content-thumb*/
+.Thumb{
+    float: left;
+    width: 20%;
+    height: 110px;
+    margin-right: 2%;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.Thumb img{
+    width: 100%;
+}
+.article-content-thumb{
+    width: 78%;
+    padding-left: 22%;
+    min-height: 120px;
+}
+
+.article-content-noimg{
+    width: 100%;
+    min-height: 120px;
+
+}
+@media only screen and (max-width: 800px){
+    .Thumb{
+        width: 100%;
+        height: auto;
+    }
+    .Thumb img{
+        height: auto;
+    }
+    .article-content-thumb{
+        width: 100%;
+    }
+}
