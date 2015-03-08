@@ -2,6 +2,7 @@
     <?php if (!empty($this->options->sidebarBlock) && in_array('ShowCategory', $this->options->sidebarBlock)): ?>
     <section class="block">
         <p class="ui <?php $this->options->labelColor() ?> ribbon label"><?php _e('文章分类'); ?></p>
+
         <div class="animated list category">
             <?php $this->widget('Widget_Metas_Category_List')->parse('<div class="item"><a href="{permalink}" target="_blank">{name}</a> <div class="ui label">{count}</div></div>'); ?>
         </div>

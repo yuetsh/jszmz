@@ -244,7 +244,6 @@
     -webkit-transition: .2s color ease,.2s padding-left ease,.2s background-color ease;
 }
 .side .animated.list .item:hover {
-    padding-left: 5px;
     background-color: rgba(0, 0, 0, 0.02);
     color: rgba(0, 0, 0, 0.7);
 }

@@ -237,3 +237,11 @@ section.block a{
         padding-left: 0;
     }
 }
+
+/*3.8更新 */
+.block .animated.list.category .item{
+    width: 40%;
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+}
