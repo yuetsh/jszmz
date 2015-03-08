@@ -194,16 +194,34 @@
     width: 78%;
     margin: auto;
     font-size:16px;
-    background: rgba(114, 163, 239, 0.53);
+    background: rgba(210, 163, 175, 0.61);
 
-    box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
-    -moz-box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
+    box-shadow: 0 5px 20px rgba(119, 56, 111, 0.63);
+    -moz-box-shadow: 0 5px 20px rgba(119, 56, 111, 0.63);
 
     animation: show-description 1s ease-out 0 1 forwards;
     -o-animation: show-description 1s ease-out 0 1 forwards;
     -moz-animation: show-description 1s ease-out 0 1 forwards;
     -webkit-animation: show-description 1s ease-out 0 1 forwards;
 }
+
+/*3.8更新 */
+@media (max-width: 890px) {
+    #information {
+    text-align: center;
+    width: 78%;
+    margin: auto;
+    font-size:16px;
+    background: rgba(114, 163, 239, 0.53);
+    box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
+    -moz-box-shadow: 0 5px 20px rgba(63, 58, 144, 0.68);
+    animation: show-description 1s ease-out 0 1 forwards;
+    -o-animation: show-description 1s ease-out 0 1 forwards;
+    -moz-animation: show-description 1s ease-out 0 1 forwards;
+    -webkit-animation: show-description 1s ease-out 0 1 forwards;
+}
+}
+
 
 #information a {
     color: #fff;
