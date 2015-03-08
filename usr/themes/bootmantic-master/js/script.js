@@ -41,6 +41,8 @@ $(document).ready(function($) {
     });
     $('.main .block .round-date').click(function () {
         $(this).siblings('.label').slideToggle("slow");
+//        ThumbImg
+        $(this).siblings('.Thumb').slideToggle("slow");
         $(this).siblings('.article-content').slideToggle("slow");
     });
 
