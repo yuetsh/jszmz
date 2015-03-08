@@ -223,6 +223,7 @@ section.block a{
         height: auto;
     }
     .article-content-thumb{
-        width: 100%;
+        width: auto;
+        padding-left: 0;
     }
 }
