@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/header.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/content.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/comments.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/pgwmenu.min.css'); ?>">
 
 <?php if ($this->options->bgImg): ?>
 <style>
@@ -69,20 +70,21 @@
 
 <div class="navbar">
     <div class="container">
-        <ul class="nav">
-            <li><a<?php if($this->is('index')): ?> class="active"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+        <ul class="pgwMenu">
+            <li><a<?php if($this->is('index')&&!isset($_GET['allcate'])): ?> class="selected"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a></li>
+            <li><a<?php if(isset($_GET['allcate'])): ?> class="selected"<?php endif; ?> href="<?php $this->options->siteUrl(); ?>?allcate"><?php _e('文章分类'); ?></a></li>
             <?php if ($this->options->whatInNavbar == "cate") : ?>
                 <?php $this->widget('Widget_Metas_Category_List')->to($cate); ?>
                 <?php while($cate->next()): ?>
-                <li><a<?php if($this->is('category', $cate->slug)): ?> class="active"<?php endif; ?> href="<?php $cate->permalink(); ?>" title="<?php $cate->description(); ?>"><?php $cate->name(); ?></a></li>
+                <li><a<?php if($this->is('category', $cate->slug)): ?> class="selected"<?php endif; ?> href="<?php $cate->permalink(); ?>" title="<?php $cate->description(); ?>"><?php $cate->name(); ?></a></li>
                 <?php endwhile; ?>
             <?php elseif ($this->options->whatInNavbar == "page"): ?>
                 <?php $this->widget('Widget_Contents_Page_List')->to($page); ?>
                 <?php while($page->next()): ?>
-                <li><a<?php if($this->is('page', $page->slug)): ?> class="active"<?php endif; ?> href="<?php $page->permalink(); ?>" title="<?php $page->title(); ?>"><?php $page->title(); ?></a></li>
+                <li><a<?php if($this->is('page', $page->slug)): ?> class="selected"<?php endif; ?> href="<?php $page->permalink(); ?>" title="<?php $page->title(); ?>"><?php $page->title(); ?></a></li>
                 <?php endwhile; ?>
             <?php endif; ?>
-        </ul>
+        
         <div class="nav-right">
             <?php if (!empty($this->options->navbarMeta) && in_array('ShowSearch', $this->options->navbarMeta)): ?>
             <form class="search-form" method="post" action="./">
@@ -98,6 +100,7 @@
                 <?php endif; ?>
             </ul>
         </div>
+        </ul>
     </div>
 </div>
   

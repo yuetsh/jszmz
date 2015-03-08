@@ -11,8 +11,9 @@
  
     $this->need('header.php');
 ?>
-
 <div class="main">
+<?php if (!isset($_GET['allcate'])):  ?>
+
     <?php while($this->next()):  
     $i=""; ?>
     <article class="block post">
@@ -37,7 +38,22 @@
         </article>
     <?php endwhile; ?>
     <?php $this->pageNav('<< 上一页', '下一页 >>'); ?>
-</div>
 
+<?php else: ?>
+    <?php $this->widget('Widget_Metas_Category_List')->to($catelist) ?>
+    <?php while($catelist->next()):  ?>
+    <article class="block post">
+        
+        <p class="title"><a href="<?php $catelist->permalink() ?>" target="_blank"><?php $catelist->name(56,'...'); ?></a><br/>
+        <span class="article-meta">文章数： <?php $catelist->count(); ?></span>
+        </p>
+        
+       <div class="article-content <?php $this->options->labelColor() ?>">
+                 <?=$catelist->description ? $catelist->description : "暂无简介";  ?>
+            </div>
+        </article>
+    <?php endwhile; ?>
+<?php endif; ?>
+</div>
 <?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>

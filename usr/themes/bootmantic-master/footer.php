@@ -16,5 +16,7 @@
 <?php $this->footer(); ?>
 <script src="<?php $this->options->adminUrl('js/jquery.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/script.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/pgwmenu.min.js'); ?>"></script>
+<script >$('.pgwMenu').pgwMenu();</script>
     </body>
 </html>
