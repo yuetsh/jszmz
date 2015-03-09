@@ -96,6 +96,7 @@ img.avatar {
     margin: 10px 0;
 }
 
+
 /* 布局 */
 
 .container {
@@ -244,4 +245,12 @@ section.block a{
     display: inline-block;
     padding-left: 5%;
     padding-right: 5%;
+}
+@media (max-width: 1097px) {
+    .block .animated.list.category .item{
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
